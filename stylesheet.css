@@ -97,3 +97,9 @@ footer h2{
 
 /*<------------------buttons------------->*/
 
+.new_note{
+    border-radius: 12px;
+    background-color: #256993;
+    color: white;
+    width: 50%;
+}
