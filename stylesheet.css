@@ -22,6 +22,10 @@ nav{
     grid-column: 2/3;
 }
 
+nav h2{
+    color: #256993;
+}
+
 
 
 /*<------------------header------------->*/
@@ -32,6 +36,10 @@ header{
     grid-column: 2/3;
     margin: 0%;
     height: 75px;
+}
+
+header h1{
+    color: #256993;
 }
 
 
@@ -48,6 +56,15 @@ aside{
     grid-row: 1/5;
     background-color: #FAF4EC;
 }
+
+aside h2{
+    color: #256993;
+}
+
+aside li{
+    color: #256993;
+}
+
 
 
 
@@ -69,3 +86,14 @@ footer{
     grid-column: 2;
     grid-row: 4;
 }
+
+footer h2{
+    color: #256993;
+}
+
+
+
+
+
+/*<------------------buttons------------->*/
+
