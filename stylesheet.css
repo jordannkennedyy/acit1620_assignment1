@@ -6,11 +6,6 @@ body{
     background-color: #F3E9DE;
    }
 
-/* body{
-    height: 100%;
-    background-color: #F3E9DE;
-} */
-
 
 /*<------------------nav------------->*/
 
@@ -46,14 +41,6 @@ header h1{
 }
 
 
-/*<------------------aside------------->*/
-
-/* .aside_main_container{
-    display: flex;
-} */
-
-
-
 aside{
     grid-column: 1;
     grid-row: 1/5;
@@ -74,8 +61,6 @@ aside ul{
 aside ul li{
     padding: 0%;
 }
-
-
 
 
 /*<------------------main------------->*/
@@ -167,4 +152,13 @@ footer h2{
 
 textarea{
     border: 2px solid #256993;
+}
+
+
+/*<------------------responsive design------------->*/
+
+@media screen and (max-width:600px) {
+
+    
+    
 }
