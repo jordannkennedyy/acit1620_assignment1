@@ -1,7 +1,8 @@
 /*<------------------body------------->*/
+
 body{
     display:grid;
-    height: 100vh;
+    height: 97vh;
     grid-template-rows: 0.3fr 0.2fr 3fr 0.5fr;
     grid-template-columns: 20% 80%;
     background-color: #F3E9DE;
