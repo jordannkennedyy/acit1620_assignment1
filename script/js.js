@@ -36,3 +36,21 @@ function cancelfeature(){
     document.querySelector(".save").hidden = true;
 }
 cancelbutton.addEventListener("click", cancelfeature);
+
+
+// If the textarea, save and cancel buttons are hidden, 
+// pressing "New Note" button would make them visible. After that pressing “New Note” again should clear the text area.
+
+const newnotes = document.querySelector(".new_note")
+
+function newnote(){
+    if (document.querySelector("textarea").hidden, document.querySelector(".cancel").hidden, document.querySelector(".save").hidden  === true){
+        document.querySelector("textarea").hidden = false;
+        document.querySelector(".cancel").hidden = false;
+        document.querySelector(".save").hidden = false;
+    } else {
+            document.querySelector("textarea").value = " "
+    }
+}
+
+newnotes.addEventListener("click", newnote);
