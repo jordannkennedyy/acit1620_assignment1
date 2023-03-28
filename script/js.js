@@ -60,6 +60,9 @@ newnotes.addEventListener("click", newnote);
 
 
 // When the user types something in the textarea and clicks the “save” button (4 points)
+// Show a prompt to the user and ask for the title of the note they want to save
+// Add a new JS object to the notesArray with the provided title and the text in the text area as the body
+// Add a list item to the sidebar with the title of the JS object you just added to the array
 const saved = document.querySelector(".save")
 function save(){
     let user_input = prompt("What is the title of your new note?:")
@@ -73,6 +76,17 @@ function save(){
 }
 saved.addEventListener("click", save);
 
-// Show a prompt to the user and ask for the title of the note they want to save
-// Add a new JS object to the notesArray with the provided title and the text in the text area as the body
-// Add a list item to the sidebar with the title of the JS object you just added to the array
+
+// When any of the list items on the sidebar (including the default note one and note two added in the html) 
+// are clicked, you should search through notesArray and find the JS object with 
+// its title property equal to the text of the clicked item. Then display the value of its body property in the text area. 
+
+const searchnow = document.querySelector("aside")
+function search(event){
+    if (event.target.tagName == "LI"){
+        let select = event.target.textContent;
+        let searching = notesArray.find(note => note.title === select);
+        console.log(searching);
+    }
+}
+searchnow.addEventListener("click", search);
