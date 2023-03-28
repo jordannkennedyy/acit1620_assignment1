@@ -165,7 +165,27 @@ textarea{
 }
 
 
+/*<------------------darkmode toggle------------->*/
 
+.dark_mode{
+    background-color: #375F68;
+}
+
+.dark_mode aside{
+    background-color: #56536A;
+}
+
+.dark_mode h1{
+    color: white;
+}
+
+.dark_mode h2{
+    color: white;
+}
+
+.dark_mode ul{
+    color: white
+}
 
 
 
