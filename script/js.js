@@ -1,3 +1,9 @@
+// Declare an array (notesArray) in your JS code with JS note objects in this format: {title:"note one", body:"this is my first note"}. 
+// Make sure this variable is declared outside of any function.
+
+let notesArray = [{title:"note one", body:"this is my first note"}]
+
+
 // Text on the button should be updated to “Light Theme”.
 // Pressing the “Light Theme” button would reverse all the changes. (3 points)
 
@@ -52,5 +58,4 @@ function newnote(){
             document.querySelector("textarea").value = " "
     }
 }
-
 newnotes.addEventListener("click", newnote);
