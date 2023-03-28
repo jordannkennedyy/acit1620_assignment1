@@ -5,7 +5,7 @@ let notesArray = [{title:"note one", body:"this is my first note"}]
 
 // Text on the button should be updated to “Light Theme”.
 // Pressing the “Light Theme” button would reverse all the changes. (3 points)
-const darkmodebutton = document.querySelector('.dark_theme')
+let darkmodebutton = document.querySelector('.dark_theme')
 
 function darkmode(){
     var body = document.querySelector("body")
@@ -21,7 +21,11 @@ function darkmode(){
     nav.classList.toggle("dark_mode");
     header.classList.toggle("dark_mode");
     aside.classList.toggle("dark_mode");
-    darkmodebutton.textContent === "light theme";
+    if (darkmodebutton.textContent == "Dark Theme"){
+        darkmodebutton.textContent = "Light Theme"
+    } else {
+        darkmodebutton.textContent = "Dark Theme"
+    }
 }
 darkmodebutton.addEventListener("click", darkmode);
 
@@ -56,6 +60,19 @@ newnotes.addEventListener("click", newnote);
 
 
 // When the user types something in the textarea and clicks the “save” button (4 points)
+const saved = document.querySelector(".save")
+function save(){
+    let user_input = prompt("What is the title of your new note?:")
+    notesArray.title = user_input
+    var textarea = document.getElementById("textarea").value
+    notesArray.note = textarea
+    const li = document.createElement("li")
+    var asidearea = document.querySelector("ul")
+    li.textContent = user_input
+    asidearea.appendChild(li)
+}
+saved.addEventListener("click", save);
+
 // Show a prompt to the user and ask for the title of the note they want to save
 // Add a new JS object to the notesArray with the provided title and the text in the text area as the body
 // Add a list item to the sidebar with the title of the JS object you just added to the array
