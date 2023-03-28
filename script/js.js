@@ -1,14 +1,10 @@
 // Declare an array (notesArray) in your JS code with JS note objects in this format: {title:"note one", body:"this is my first note"}. 
 // Make sure this variable is declared outside of any function.
-
 let notesArray = [{title:"note one", body:"this is my first note"}]
 
 
 // Text on the button should be updated to “Light Theme”.
 // Pressing the “Light Theme” button would reverse all the changes. (3 points)
-
-
-
 const darkmodebutton = document.querySelector('.dark_theme')
 
 function darkmode(){
@@ -30,10 +26,7 @@ function darkmode(){
 darkmodebutton.addEventListener("click", darkmode);
 
 
-
-
 // Clicking the “cancel” button should hide the text area, save, and cancel buttons.
-
 const cancelbutton = document.querySelector(".cancel")
 
 function cancelfeature(){
@@ -46,7 +39,6 @@ cancelbutton.addEventListener("click", cancelfeature);
 
 // If the textarea, save and cancel buttons are hidden, 
 // pressing "New Note" button would make them visible. After that pressing “New Note” again should clear the text area.
-
 const newnotes = document.querySelector(".new_note")
 
 function newnote(){
@@ -59,3 +51,11 @@ function newnote(){
     }
 }
 newnotes.addEventListener("click", newnote);
+
+
+
+
+// When the user types something in the textarea and clicks the “save” button (4 points)
+// Show a prompt to the user and ask for the title of the note they want to save
+// Add a new JS object to the notesArray with the provided title and the text in the text area as the body
+// Add a list item to the sidebar with the title of the JS object you just added to the array
