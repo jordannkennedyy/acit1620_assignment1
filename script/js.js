@@ -1,6 +1,6 @@
 // Declare an array (notesArray) in your JS code with JS note objects in this format: {title:"note one", body:"this is my first note"}. 
 // Make sure this variable is declared outside of any function.
-let notesArray = [{title:"note one", body:"this is my first note"}]
+const notesArray = [{title:"note one", body:"this is my first note"}]
 
 
 // Text on the button should be updated to “Light Theme”.
@@ -66,9 +66,11 @@ newnotes.addEventListener("click", newnote);
 const saved = document.querySelector(".save")
 function save(){
     let user_input = prompt("What is the title of your new note?:")
-    notesArray.title = user_input
     var textarea = document.getElementById("textarea").value
-    notesArray.note = textarea
+    var creation = Object.create(notesArray);
+    creation.title = user_input
+    creation.body = textarea
+    notesArray.push(creation)
     const li = document.createElement("li")
     var asidearea = document.querySelector("ul")
     li.textContent = user_input
@@ -83,10 +85,17 @@ saved.addEventListener("click", save);
 
 const searchnow = document.querySelector("aside")
 function search(event){
-    if (event.target.tagName == "LI"){
+    if(event.target.tagName == "LI"){
         let select = event.target.textContent;
-        let searching = notesArray.find(note => note.title === select);
-        console.log(searching);
+            for(i= 0; i < notesArray.length; i++){
+                if(notesArray[i].title == select){
+                    console.log(notesArray[i].body)
+             }
+        }
     }
 }
 searchnow.addEventListener("click", search);
+
+
+//let searching = notesArray.find(note => note.title === select);
+//console.log(searching);
